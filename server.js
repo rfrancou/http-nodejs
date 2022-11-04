@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
-const port = 8080;
-
+const port = process.env.PORT;
+console.log(`process.env ${process.env}!`)
 app.get(["/", "/:name"], (req, res) => {
   greeting = "<h1>Hello From Node</h1>";
   name = req.params["name"];
